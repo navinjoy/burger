@@ -20,10 +20,10 @@ $(function () {
     $(".create-form").on("submit", function() {
         event.preventDefault();
         var newBurger = {
-            name: $("burgerid").val().trim(),
+            name: $("#burgerid").val().trim(),
             devoured: false
         }
-
+        $("burgerid").val("");
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger

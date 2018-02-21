@@ -9,13 +9,15 @@ var burger = {
     },
 
     insert: function(burger_name, devoured, cb) {
+        console.log('burger.insert', burger_name, devoured);
         orm.insertOne("burgers", burger_name, devoured, function(res){
             cb(res);
         })
     },
 
-    update: function(burger_name, devoured, id, cb) {
-        orm.updateOne("burgers", burger_name, devoured, id, function(res){
+    update: function(devoured, id, cb) {
+        console.log("**inside update**", devoured, id)
+        orm.updateOne("burgers", devoured, id, function(res){
             cb(res);
         })
     }
