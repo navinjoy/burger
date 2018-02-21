@@ -3,34 +3,29 @@
 <br>
 <hr>
 <div id="leftDiv">
-<h2>Burgers Orders Placed</h2>
-<ol>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burgers-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ol>
+  <h2>Burgers Orders Placed</h2>
+  <ol>
+    {{#each burgers}} {{#unless devoured}} {{> burgers/burgers-block devoured=true}} {{/unless}} {{/each}}
+  </ol>
 </div>
 <div id="rightDiv">
-<h2>Burgers Delivered</h2>
-<ol>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burgers-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ol>
+  <h2>Burgers Delivered</h2>
+  <ol>
+    {{#each burgers}} {{#if devoured}} {{> burgers/burgers-block devoured=false}} {{/if}} {{/each}}
+  </ol>
 </div>
 
+<br>
 
-<h2>Enter the name of the Burger you want to Yum !!</h2>
-
-<form class="create-form">
-  <div class="form-group">
-    <label for="burgerid">Burger Name:</label>
-    <input type="text" id="burgerid" name="burgername">
-  <button id="addburger" type="submit">Add Burger</button>
-  </div>
-</form>
+<div id="addburger">
   <br>
+  <h2>Enter the name of the Burger you want to Yum !!</h2>
+  <form class="create-form">
+    <div class="form-group">
+      <label for="burgerid">Burger Name:</label>
+      <input type="text" id="burgerid" name="burgername">
+      <button id="addburger" type="submit">Add Burger</button>
+    </div>
+  </form>
+  <br>
+</div>

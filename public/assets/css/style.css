@@ -42,3 +42,8 @@ img {
 
 h1 {
 text-align: center}
+
+#addburger {
+    clear: left;
+    /* float: none; */
+}
